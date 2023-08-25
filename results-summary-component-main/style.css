@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 600px;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 1px 0px 20px 2px rgb(0, 0, 0, 0.4);
+}
+
+.left {
+  color: #fff;
+  width: 40%;
+  border-radius: 20px;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  padding: 20px;
+  text-align: center;
+
+  /* background-color: aliceblue; */
+}
+
+.right {
+  width: 50%;
+  border-radius: 20px;
+
+  padding: 20px;
+
+  /* background-color: aliceblue; */
+}
+
+.left h3 {
+  text-align: center;
+}
+
+.you-result {
+  border-radius: 100%;
+  width: 74px;
+  height: 74px;
+  padding: 50px;
+  box-shadow: inset 1px 1px 12px 0px hsla(256, 72%, 46%, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.big-score {
+  color: #fff;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.name-line {
+  display: flex;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.reaction {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.memory {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.verbal {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.visual {
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.grey-text {
+  color: rgba(87, 87, 87, 0.9);
+}
+
+.black-text {
+  color: #222;
+  font-weight: bold;
+}
+
+.name-line img {
+  margin-right: 5px;
+}
+
+button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  border: none;
+  color: white;
+  outline: none;
+  background-color: hsl(224, 30%, 27%);
+  width: 100%;
+  border-radius: 20px;
+}
+
+@media (max-width: 760px) {
+  .left {
+    width: 100%;
+    border-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0px;
+  }
+
+  .right {
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .left-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0px;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
