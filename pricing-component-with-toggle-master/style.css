@@ -1,0 +1,196 @@
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: url("./images/bg-top.svg") no-repeat right top,
+    url("./images/bg-bottom.svg") no-repeat left bottom;
+  background-color: hsl(240, 78%, 98%);
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1440px;
+}
+
+.components {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+
+.white-box {
+  background-color: white;
+  box-shadow: -0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 220px;
+}
+
+.purple-box {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.basic {
+  border-radius: 10px 0 0 10px;
+}
+
+.master {
+  border-radius: 0 10px 10px 0;
+}
+
+.price {
+  font-size: 50px;
+  margin: 0;
+}
+
+.dollar {
+  font-size: 26px;
+  vertical-align: 10px;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+li {
+  border-top: 1px solid hsl(234, 14%, 74%);
+  padding: 10px;
+  font-size: 12px;
+}
+
+button {
+  margin: 20px 0 0 0;
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.purple-btn {
+  background: linear-gradient(45deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+}
+
+.purple-btn:hover {
+  background: white;
+  color: hsl(237, 63%, 64%);
+  outline: 1px solid hsl(232, 13%, 33%);
+}
+
+.white-btn {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+
+.white-btn:hover {
+  background: hsla(0, 0%, 0%, 0);
+  color: white;
+  outline: 1px solid white;
+}
+
+h5 {
+  margin: 0;
+}
+
+.grey {
+  color: hsl(232, 13%, 33%);
+}
+
+.checkbox {
+  color: hsl(234, 14%, 74%);
+}
+
+.checkbox span {
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  body {
+    background: url("./images/bg-top.svg") no-repeat right top;
+    background-color: hsl(240, 78%, 98%);
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .components {
+    flex-direction: column;
+  }
+
+  .purple-box,
+  .white-box {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 200px;
+  }
+  h5 {
+    margin: 10px 0 15px 0;
+  }
+}
+
+.checkbox {
+  display: inline-flex;
+  width: 260px;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.checkbox .checkmark {
+  position: absolute;
+  width: 38px;
+  height: 22px;
+  border-radius: 11px;
+  background: hsl(237, 63%, 64%);
+  transition: color 0.25s ease;
+}
+
+.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  transition: left 0.25s ease;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background: hsl(236, 72%, 79%);
+}
+
+.checkbox:hover .checkmark {
+  background: hsl(237, 63%, 64%);
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  left: 19px;
+}
